@@ -1,0 +1,68 @@
+<head>
+    <title>
+        
+            Java1
+        
+    </title>
+</head>
+<script>
+    document.write("Day la java<br>")
+    console.log("F12 chon console de xem dong nay")
+    var tuoi = 18
+    var tuoi2 = tuoi
+    var ten = "Le Nguyen Khai"
+    var dep_trai = true
+    document.write(ten + "<br>")
+    ten = window.prompt("Nhap ten")
+    document.write("Tao la " + ten + "<br>")
+    tuoi = tuoi2 + tuoi
+    document.write(tuoi < 30)
+    document.write("<br>")
+    tuoi = parseInt(window.prompt("Nhap tuoi cua ban"))
+    if (tuoi >= 18) {
+        document.write("Da du tuoi di tu<br>")
+    }
+    else {
+        document.write("Chua di tu duoc<br>")
+    }
+    switch (tuoi){
+         case 18:
+            document.write("18 tuoi<br>")
+            break
+         case 17:
+            document.write("Tuoi 17<br>")
+            break
+         default:
+            document.write("Ngu<br>")
+            break
+    }
+    document.write("Nam nay ", ten," ", tuoi, " tuoi<br>")
+    for (var i = 1; i < 10; i++){
+        tuoi++
+        document.write(i, " nam sau ", tuoi, " tuoi.<br>")
+    }
+    var bo = {
+        ten: "Le Van Luong",
+        tuoi: 48,
+        hon_nhan: true,
+        vo: {
+            ten: "Dinh Thi Thanh Nguyen",
+            tuoi: 41
+        }
+    }
+    document.write(bo.ten, "<br>", bo.vo.ten, "<br>")
+    var tinh_nam_sinh = function(x){
+        var nam_sinh = 2024 - x + 9
+        document.write("Nam sinh cua ", ten, " la ", nam_sinh, "<br>")
+    }
+    tinh_nam_sinh(tuoi)
+    var A = ["IT1", "IT2", "IT-E6"]
+    document.write(A, "<br>")
+    A.push("Toan tin")
+    A.pop()
+    for (var i = 1; i <= A.length; i++){
+        document.write("Nguyen vong so ", i, " cua ", ten, " la ", A[i - 1], "<br>")
+    }
+    var s = "Le Nguyen Khai 2004"
+    document.write(s[0]," ", s.length, "<br>")
+</script>
