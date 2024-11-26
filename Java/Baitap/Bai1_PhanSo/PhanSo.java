@@ -1,4 +1,4 @@
-package Baitap.Bai1_PhanSo;
+package Bai1_PhanSo;
 
 public class PhanSo{
     public int TuSo;
