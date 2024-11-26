@@ -9,7 +9,7 @@ public class Cart {
 	private int qtyOrdered = 0;
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
-		if (qtyOrdered < 20) {
+		if (qtyOrdered < MAX_NUMBERS_ORDERED) {
 			items0rdered[qtyOrdered] = disc;
 			qtyOrdered += 1;
 			System.out.println("This disc has been added!");
@@ -26,7 +26,7 @@ public class Cart {
 		int n = dvdList.length;
 		int d = 0;
 		for (int i = 0; i < n; i++) {
-			if (dvdList[i] != null && qtyOrdered < 20) {
+			if (dvdList[i] != null && qtyOrdered < MAX_NUMBERS_ORDERED) {
 				items0rdered[qtyOrdered] = dvdList[i];
 				qtyOrdered += 1;
 				d += 1;
@@ -38,6 +38,28 @@ public class Cart {
 	        System.out.println(d + (d == 1 ? " disc has been added!" : " discs have been added!"));
 	    }
 	}
+	
+//	public void addDigitalVideoDisc(DigitalVideoDisc... dvdList) {
+//	    if (dvdList == null || dvdList.length == 0) {
+//	        System.out.println("No disc has been added because the list is null or empty!");
+//	        return;
+//	    }
+//	    int n = dvdList.length;
+//	    int d = 0;
+//	    for (int i = 0; i < n; i++) {
+//	        if (dvdList[i] != null && qtyOrdered < MAX_NUMBERS_ORDERED) {
+//	            items0rdered[qtyOrdered] = dvdList[i];
+//	            qtyOrdered += 1;
+//	            d += 1;
+//	        }
+//	    }
+//	    if (d == 0) {
+//	        System.out.println("No disc has been added!");
+//	    } else {
+//	        System.out.println(d + (d == 1 ? " disc has been added!" : " discs have been added!"));
+//	    }
+//	}
+
 	
 	public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2){
 		addDigitalVideoDisc(dvd1);
